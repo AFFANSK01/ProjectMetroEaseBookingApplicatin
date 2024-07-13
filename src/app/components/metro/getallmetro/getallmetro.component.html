@@ -1,0 +1,33 @@
+<div style="margin: 0% 5%;">
+    <header class="header">
+        <button (click)="back()" class="back-button">Back To Dashboard</button>
+
+    </header>
+    <table class="table">
+       
+        <thead>
+            <tr>
+                <th scope="col">Metro Id</th>
+                <th scope="col">Metro Name</th>
+                <th scope="col">Metro Capacity</th>
+                <th scope="col">Metro StationRoute</th>
+                <th scope="col">Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of metros | async">
+                <td>{{m.metroId}}</td>
+                <td>{{m.metroName}}</td>
+                <td>{{m.capacity}}</td>
+                <td>{{m.stationRoute}}</td>
+                <td><button (click)="deleteMetro(m.metroId)" class="btn btn-danger">Delete</button>
+                    <button (click)="findMetro(m.metroId)" class="btn btn-info"
+                        style="margin-left: 10px">View</button>
+                    <button (click)="updateMetro(m.metroId)" class="btn btn-info"
+                        style="margin-left: 10px">Edit</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

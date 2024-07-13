@@ -1,0 +1,20 @@
+<!-- admin-login.component.html -->
+<div class="login-container">
+  <form (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="userName">Username</label>
+      <input type="text" id="userName" [(ngModel)]="admin.adminName" name="userName" required>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" [(ngModel)]="admin.adminpassword" name="password" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" [(ngModel)]="admin.adminemail" name="email" required>
+    </div>
+    
+    <button type="submit">Login</button>
+  </form>
+  <div *ngIf="errorMessage">{{ errorMessage }}</div>
+</div>

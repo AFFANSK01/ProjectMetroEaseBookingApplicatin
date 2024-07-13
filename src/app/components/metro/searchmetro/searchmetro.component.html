@@ -1,0 +1,18 @@
+<div class="details-container" *ngIf="metro">
+    <header class="header">
+      <button (click)="back()" class="back-button">Back To Get All Metro </button>
+  
+      </header>
+      <h3 class="details-title">Details of Metro ID: {{metro.metroId}}</h3>
+      <div class="details">
+        <h4>Metro ID:</h4>
+        <p>{{metro.metroId}}</p>
+        <h4>Metro Name:</h4>
+        <p>{{metro.metroName}}</p>
+        <h4>Metro capacity:</h4>
+        <p>{{metro.capacity}}</p>
+        <h4>Metro stationRoute:</h4>
+        <p>{{metro.stationRoute}}</p>
+      </div>
+    </div>
+    

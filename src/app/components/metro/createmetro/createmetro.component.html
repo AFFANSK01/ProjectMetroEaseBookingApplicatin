@@ -1,0 +1,34 @@
+<div class="create-cab-container">
+    <header class="header">
+  
+      <h1 style="text-align: center;"> Create Metro</h1>
+    </header>
+
+    <form (ngSubmit)="onSubmit()" class="form-content">
+      <div class="content-area">
+      
+      
+      <div class="mb-3">
+        <label for="metroName" class="form-label">Metro Name:</label>
+        <input type="text" class="form-control" id="metroName" required [(ngModel)]="m.metroName" name="metroName">
+      </div>
+      <div class="mb-3">
+        <label for="stationRoute" class="form-label">Metro StationRoute:</label>
+        <input type="text" class="form-control" id="stationRoute" required [(ngModel)]="m.stationRoute" name="stationRoute">
+      </div>
+      <div class="mb-3">
+        <label for="capacity" class="form-label">Metro Capacity:</label>
+        <input type="text" class="form-control" id="capacity" required [(ngModel)]="m.capacity" name="capacity">
+      </div>
+      <button type="submit" class="btn btn-primary submit-button">Submit</button>
+      <br>
+      <button (click)="back()" class="back-button">Back To Dashboard</button>
+
+      
+
+    </div>
+    </form>
+  </div>
+  
+  
+  

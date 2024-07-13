@@ -1,0 +1,21 @@
+<form (ngSubmit)="onSubmit()">
+    <header class="header">
+      <button (click)="back()" class="back-button">Back To Get All Metro</button>
+  
+      </header>
+    <h1>This is a Update Metro Details</h1>
+    <div class="mb-3">
+      <label for="name" class="form-label">Metro Name :</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Which ID's Details You Want To change" required [(ngModel)]="metro.metroName" name="id">
+    </div>
+    <div class="mb-3">
+      <label for="capacity" class="form-label">Metro capacity :</label>
+      <input type="text" class="form-control" id="capacity" required [(ngModel)]="metro.capacity" name="capacity">
+    </div>
+    <!-- <div class="mb-3">
+      <label for="stationRoute" class="form-label">Metro stationRoute :</label>
+      <input type="text" class="form-control" id="stationRoute" required [(ngModel)]="metro.stationRoute" name="stationRoute">
+    </div> -->
+    
+    <button type="submit" class="btn btn-primary">Edit</button>
+  </form>
